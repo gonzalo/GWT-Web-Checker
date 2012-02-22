@@ -1,0 +1,3 @@
+# Module web_checker
+# RPC service class, partial path of RPC policy file
+net.zoogon.webcheck.client.GreetingService, 51F9D8B6D9ABCA3A0B9C12A059E3E451.gwt.rpc
