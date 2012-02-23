@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<g:HTMLPanel>
+		<g:Label>Url to check (http://...)</g:Label>
+		<g:TextBox ui:field="TB_urlEntry"/>
+		<g:Button  ui:field="BT_checkIt" />
+	</g:HTMLPanel>
+</ui:UiBinder> 
