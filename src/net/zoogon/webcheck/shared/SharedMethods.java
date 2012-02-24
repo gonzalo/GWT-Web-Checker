@@ -15,7 +15,7 @@ public class SharedMethods {
 	 * @return true or false
 	 */
 	public static boolean isWellFormed (String url){
-		return isValidUrl(url, true);
+		return isValidUrl(url, false);
 	}
 	
 	/**
