@@ -14,7 +14,7 @@
 	</servlet>
 	<servlet-mapping>
 	  <servlet-name>SimpleCheckerServiceImpl</servlet-name>
-	  <url-pattern>/net.zoogon.webcheck/simpleChecker</url-pattern>
+	  <url-pattern>/web_checker/simpleChecker</url-pattern>
 	</servlet-mapping>  
   <!-- Default page to serve -->
   <welcome-file-list>
