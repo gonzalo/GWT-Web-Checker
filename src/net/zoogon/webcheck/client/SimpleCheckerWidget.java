@@ -27,14 +27,9 @@ public class SimpleCheckerWidget extends Composite implements HasText {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
-	@UiField
-	Button BT_checkIt;
+	@UiField Button BT_checkIt;
+	@UiField TextBox TB_urlEntry;
 	
-	@UiField
-	TextBox TB_urlEntry;
-	
-	
-
 	public SimpleCheckerWidget(String defaultUrl) {
 		initWidget(uiBinder.createAndBindUi(this));
 		TB_urlEntry.setText(defaultUrl);
@@ -43,6 +38,7 @@ public class SimpleCheckerWidget extends Composite implements HasText {
 
 	@UiHandler("BT_checkIt")
 	void onClick(ClickEvent e) {
+		
 		//validamos la url introducida
 		if (SharedMethods.isWellFormed(TB_urlEntry.getText()))
 			Window.alert("Valid Url\nUrl to check: " + TB_urlEntry.getText());

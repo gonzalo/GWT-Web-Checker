@@ -1,0 +1,2 @@
+# Module net.zoogon.webcheck.Web_Checker.JUnit
+# RPC service class, partial path of RPC policy file
