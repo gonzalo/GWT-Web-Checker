@@ -1,0 +1,15 @@
+GWT Web Checker
+A web monitor over GWT and GAE
+
+Futere features 
+- Manual checking of the availability of an url from GAE servers
+- Signed users can insert a range of url and app will check them
+  periodically.
+- Email notifications
+- Availability charts
+
+At this moment GWT Web Checker is completely useless. I'm
+using GitHub just as CVS to share this project between my 
+computers.
+
+I hope to have a semi functional version in the near future 
