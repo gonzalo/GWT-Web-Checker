@@ -1,2 +1,0 @@
-serviceClass: net.zoogon.webcheck.client.GreetingService
-path: 51F9D8B6D9ABCA3A0B9C12A059E3E451.gwt.rpc

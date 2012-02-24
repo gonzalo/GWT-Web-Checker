@@ -6,9 +6,14 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 public class SimpleCheckerServiceImpl extends RemoteServiceServlet implements SimpleCheckerService {
 
-  public WebSite getStatus(String url) {
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+public String simpleWebCheck(String url) {
     // TODO Auto-generated method stub
-    return null;
+    return "todoOK";
   }
 
 }

@@ -7,5 +7,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("simpleChecker")
 public interface SimpleCheckerService extends RemoteService {
 
-  WebSite getStatus(String url);
+  public String simpleWebCheck(String url);
 }

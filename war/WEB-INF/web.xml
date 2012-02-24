@@ -6,7 +6,16 @@
          xmlns="http://java.sun.com/xml/ns/javaee">
 
   <!-- Servlets -->
-  
+	<servlet>
+	  <servlet-name>SimpleCheckerServiceImpl</servlet-name>
+	  <servlet-class>
+	    net.zoogon.webcheck.server.SimpleCheckerServiceImpl
+	  </servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>SimpleCheckerServiceImpl</servlet-name>
+	  <url-pattern>/net.zoogon.webcheck/simpleChecker</url-pattern>
+	</servlet-mapping>  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>Web_Checker.html</welcome-file>

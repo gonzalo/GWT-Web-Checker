@@ -1,13 +1,12 @@
 package net.zoogon.webcheck.client;
 
-import net.zoogon.webcheck.shared.SharedMethods;
-
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasText;
@@ -39,11 +38,23 @@ public class SimpleCheckerWidget extends Composite implements HasText {
 	@UiHandler("BT_checkIt")
 	void onClick(ClickEvent e) {
 		
-		//validamos la url introducida
-		if (SharedMethods.isWellFormed(TB_urlEntry.getText()))
-			Window.alert("Valid Url\nUrl to check: " + TB_urlEntry.getText());
-		else
-			Window.alert("Input url is not valid\nCheck spelling: " + TB_urlEntry.getText());
+		String url = TB_urlEntry.getText();
+		
+		//creamos la interfaz asíncrona
+		SimpleCheckerServiceAsync checkService = (SimpleCheckerServiceAsync) GWT.create(SimpleCheckerService.class);
+		
+		//programamos el callback
+		AsyncCallback<String> callback = new AsyncCallback<String>() {
+		    public void onSuccess(String result) {
+		      Window.alert(result);
+		    }
+
+		    public void onFailure(Throwable caught) {
+		      Window.alert("No se completo la petición correctamente: " + caught);
+		    }
+		};
+
+		checkService.simpleWebCheck(url, callback);
 	}
 
 	public void setText(String text) {

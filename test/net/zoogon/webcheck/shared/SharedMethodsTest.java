@@ -19,7 +19,7 @@ public class SharedMethodsTest extends GWTTestCase {
 	/**
 	 * Testing badformed urls
 	 */
-	public void testIsWellFormed_badfUrls() {
+	public void testIsWellFormed_badUrls() {
 		
 		assertFalse(SharedMethods.isWellFormed("dhtp://www.google.com"));
 		assertFalse(SharedMethods.isWellFormed("dhtp://www.google.com"));

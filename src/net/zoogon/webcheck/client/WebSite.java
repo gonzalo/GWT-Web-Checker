@@ -2,10 +2,10 @@ package net.zoogon.webcheck.client;
 
 public class WebSite {
 	
-	private static final int NOT_CHECKED = -1;
-	private static final int WEBSITE_UP = 0;
-	private static final int FAILED_TO_FETCH = 1;
-	private static final int BAD_FORMED_URL = 2;
+	public static final int NOT_CHECKED = -1;
+	public static final int WEBSITE_UP = 0;
+	public static final int FAILED_TO_FETCH = 1;
+	public static final int BAD_FORMED_URL = 2;
 	
 	private static final String DEFAULT_URL = "http://www.google.com";
 	
@@ -37,6 +37,7 @@ public class WebSite {
 	 */
 	public void setUrl(String url) {
 		this.url = url;
+		this.setStatus(NOT_CHECKED);
 	}
 	/**
 	 * @return the status
@@ -47,8 +48,8 @@ public class WebSite {
 	/**
 	 * @param status the status to set
 	 */
-	private void setStatus(int status) {
-		status = status;
+	private void setStatus(int inputStatus) {
+		status = inputStatus;
 	}
 
 	
