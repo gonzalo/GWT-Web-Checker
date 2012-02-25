@@ -1,6 +1,9 @@
-package net.zoogon.webcheck.client;
+package net.zoogon.webcheck.shared;
 
-public class WebSite {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class WebSite implements Serializable{
 	
 	public static final int NOT_CHECKED = -1;
 	public static final int WEBSITE_UP = 0;

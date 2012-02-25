@@ -1,4 +1,6 @@
-package net.zoogon.webcheck.client;
+package net.zoogon.webcheck.shared;
+
+import net.zoogon.webcheck.shared.WebSite;
 
 import com.google.gwt.junit.client.GWTTestCase;;
 

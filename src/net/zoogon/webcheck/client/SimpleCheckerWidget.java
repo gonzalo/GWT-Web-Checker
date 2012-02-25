@@ -1,5 +1,7 @@
 package net.zoogon.webcheck.client;
 
+import net.zoogon.webcheck.shared.WebSite;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -44,9 +46,11 @@ public class SimpleCheckerWidget extends Composite implements HasText {
 		SimpleCheckerServiceAsync checkService = (SimpleCheckerServiceAsync) GWT.create(SimpleCheckerService.class);
 		
 		//programamos el callback
-		AsyncCallback<String> callback = new AsyncCallback<String>() {
-		    public void onSuccess(String result) {
-		      Window.alert(result);
+		AsyncCallback<WebSite> callback = new AsyncCallback<WebSite>() {
+		    public void onSuccess(WebSite result) {
+		      Window.alert("WebSite object received from server"
+		    		  		+ "\nURL: " + result.getUrl()
+		    		  		+ "\nStatus: " + result.getStatus());
 		    }
 
 		    public void onFailure(Throwable caught) {
