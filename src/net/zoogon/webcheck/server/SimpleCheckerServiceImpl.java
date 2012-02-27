@@ -16,8 +16,8 @@ public WebSite simpleWebCheck(String url) {
     
 	WebSite webToCheck = new WebSite(url);
 	
-	
-    return webToCheck;
+	webToCheck.checkWebSite();
+	return webToCheck;
   }
 
 }
